@@ -1,0 +1,73 @@
+﻿{
+  "roomTypes": [ 1, 2 ],
+  "rooms": [
+    {
+      "id": 1,
+      "roomType": 1
+    },
+    {
+      "id": 2,
+      "roomType": 1
+    },
+    {
+      "id": 3,
+      "roomType": 2
+    }
+  ],
+  "reservations": [
+    {
+      "reservationId": 1,
+      "roomType": 1,
+      "startDate": "2019-05-10",
+      "endDate": "2019-05-16"
+    },
+    {
+      "reservationId": 2,
+      "roomType": 1,
+      "startDate": "2019-05-12",
+      "endDate": "2019-05-17"
+    },
+    {
+      "reservationId": 3,
+      "roomType": 1,
+      "startDate": "2019-05-09",
+      "endDate": "2019-05-17"
+    },
+    {
+      "reservationId": 4,
+      "roomType": 1,
+      "startDate": "2019-05-17",
+      "endDate": "2019-05-19"
+    },
+    {
+      "reservationId": 5,
+      "roomType": 1,
+      "startDate": "2019-05-17",
+      "endDate": "2019-05-18"
+    },
+    {
+      "reservationId": 9,
+      "roomType": 1,
+      "startDate": "2019-05-16",
+      "endDate": "2019-05-19"
+    },
+    {
+      "reservationId": 6,
+      "roomType": 2,
+      "startDate": "2019-05-14",
+      "endDate": "2019-05-18"
+    },
+    {
+      "reservationId": 7,
+      "roomType": 2,
+      "startDate": "2019-05-17",
+      "endDate": "2019-05-21"
+    },
+    {
+      "reservationId": 8,
+      "roomType": 2,
+      "startDate": "2019-05-19",
+      "endDate": "2019-05-20"
+    }
+  ]
+}
