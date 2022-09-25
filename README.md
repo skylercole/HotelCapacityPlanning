@@ -1,4 +1,13 @@
 # HotelCapacityPlanning
+
+How to run:
+-----------
+- Get .net 6.0 command line tooling
+- Inside HotelCapacityPlanning run 'dotnet build HotelCapacityPlanning.csproj'
+- The resulting exe would be inside 'bin\debug\.net6.0\'
+- The easiest way to load and run the various tests would be inside a tool like Visual Studio. Open the solution file from HotelCapacityPlanning and that would load both the project and the test project.
+
+
 Capacity Planning Exercise
 --------------------------
 
