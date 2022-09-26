@@ -50,8 +50,7 @@
                 Console.WriteLine(output);
 
                 // Remove the chosen set of reservations from the pool of reservations for the next room in the list.
-                foreach (var reservation in result)
-                    reservations.RemoveAll(x => x.ReservationId == reservation.ReservationId);
+                reservations = reservations.Where(p => result.All(p2 => p2.ReservationId != p.ReservationId)).ToList();
 
                 resultOutput += output;
             }
@@ -86,6 +85,8 @@
                 var newReservationIdList = new List<int>(reservationIdList);
                 newReservationIdList.Remove(reservationId);
 
+                // When the last of the reservations is processed, compare the full utilization of the room vs the best utilization so far.
+                // Assign to the reservationsOptimal, if it is better and then return one level up the stack.
                 if (newReservationIdList.Count == 0)
                 {
                     var totalDaysFromCurrentReservations = reservationsForCurrentRecursion.Sum(x => x.GetDays());
@@ -99,6 +100,7 @@
                     return reservationsOptimal;
                 }
 
+                // Continue processing the next reservation.
                 reservationsOptimal = RecursiveBooking(roomId, newReservationIdList, reservationsForCurrentRecursion, reservationsOptimal);
             }
 
